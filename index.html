@@ -1,150 +1,420 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dulcionor Willian de Oliveira | IT & Projects Portfolio</title>
-    <style>
-        :root {
-            --primary-color: #003366; /* Corporate Blue */
-            --secondary-color: #008080; /* Teal/Cyan for accents */
-            --bg-color: #f4f7f6;
-            --text-color: #333;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-        }
-        header {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.2em;
-            color: #d1e0e0;
-        }
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 20px;
-        }
-        section {
-            background: white;
-            margin: 20px 0;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        h2 {
-            color: var(--primary-color);
-            border-bottom: 2px solid var(--secondary-color);
-            padding-bottom: 10px;
-        }
-        .case-study {
-            margin-bottom: 30px;
-        }
-        .case-study h3 {
-            color: var(--secondary-color);
-            margin-bottom: 5px;
-        }
-        .tag {
-            display: inline-block;
-            background: #e0ebeb;
-            color: var(--primary-color);
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.85em;
-            margin-right: 5px;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #222;
-            color: white;
-            margin-top: 40px;
-        }
-        a {
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Dulcionor Willian de Oliveira — IT Project Manager | ERP & Cloud Infrastructure | IT Service Delivery (ITIL)" />
+  <title>Dulcionor Willian de Oliveira | IT Portfolio</title>
+
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --card:#0f1624;
+      --text:#e7edf7;
+      --muted:#a8b3c7;
+      --line:#22304a;
+      --accent:#6ea8fe;
+      --accent2:#7ee787;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --max: 980px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Liberation Sans", sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(110,168,254,.15), transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(126,231,135,.10), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 80px}
+
+    /* Top nav */
+    .nav{
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+      position:sticky; top:0; z-index:50;
+      background: rgba(11,15,23,.7);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(34,48,74,.6);
+      padding:12px 18px;
+    }
+    .nav-inner{max-width:var(--max); margin:0 auto; width:100%; display:flex; align-items:center; justify-content:space-between; gap:16px}
+    .brand{display:flex; flex-direction:column; gap:2px}
+    .brand b{font-size:14px; letter-spacing:.2px}
+    .brand span{font-size:12px; color:var(--muted)}
+    .links{display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end}
+    .chiplink{
+      font-size:12px;
+      color:var(--text);
+      border:1px solid rgba(34,48,74,.9);
+      background: rgba(15,22,36,.6);
+      padding:8px 10px;
+      border-radius:999px;
+    }
+    .chiplink:hover{border-color:rgba(110,168,254,.7); text-decoration:none}
+
+    /* Hero */
+    .hero{
+      margin-top:22px;
+      background: linear-gradient(180deg, rgba(15,22,36,.85), rgba(15,22,36,.55));
+      border:1px solid rgba(34,48,74,.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:26px;
+      overflow:hidden;
+      position:relative;
+    }
+    .hero:before{
+      content:"";
+      position:absolute; inset:-2px;
+      background: radial-gradient(400px 220px at 20% 10%, rgba(110,168,254,.18), transparent 55%),
+                  radial-gradient(420px 240px at 85% 20%, rgba(126,231,135,.12), transparent 55%);
+      pointer-events:none;
+    }
+    .hero > *{position:relative}
+    h1{margin:0 0 8px; font-size:34px; letter-spacing:.2px}
+    .subtitle{margin:0; color:var(--muted); font-size:14.5px}
+    .meta{margin-top:14px; display:flex; flex-wrap:wrap; gap:10px}
+    .chip{
+      border:1px solid rgba(34,48,74,.9);
+      background: rgba(11,15,23,.35);
+      color:var(--text);
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:12.5px;
+    }
+    .cta{margin-top:18px; display:flex; gap:10px; flex-wrap:wrap}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 12px;
+      border-radius:12px;
+      border:1px solid rgba(34,48,74,.9);
+      background: rgba(15,22,36,.9);
+      color:var(--text);
+      font-size:13px;
+      font-weight:600;
+      text-decoration:none;
+    }
+    .btn:hover{border-color:rgba(110,168,254,.8); text-decoration:none}
+    .btn.primary{
+      background: linear-gradient(90deg, rgba(110,168,254,.9), rgba(126,231,135,.75));
+      border-color: transparent;
+      color:#07101d;
+    }
+    .btn.primary:hover{filter:brightness(1.05)}
+
+    /* Layout */
+    .grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap:16px;
+    }
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    /* Cards / sections */
+    section.card{
+      background: rgba(15,22,36,.75);
+      border:1px solid rgba(34,48,74,.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px 18px 16px;
+    }
+    section.card h2{
+      margin:0 0 10px;
+      font-size:16px;
+      letter-spacing:.2px;
+    }
+    .muted{color:var(--muted)}
+    .hr{height:1px; background: rgba(34,48,74,.8); margin:14px 0}
+
+    ul{margin:10px 0 0 18px}
+    li{margin:6px 0}
+    .kpi{display:grid; grid-template-columns: 1fr 1fr; gap:10px; margin-top:10px}
+    @media (max-width:520px){.kpi{grid-template-columns:1fr}}
+    .kpi .box{
+      border:1px solid rgba(34,48,74,.85);
+      background: rgba(11,15,23,.30);
+      border-radius:14px;
+      padding:12px;
+    }
+    .kpi .box b{display:block; font-size:14px}
+    .kpi .box span{display:block; margin-top:4px; font-size:12.5px; color:var(--muted)}
+
+    .tagrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .tag{
+      font-size:12px;
+      border:1px solid rgba(34,48,74,.85);
+      background: rgba(11,15,23,.28);
+      padding:7px 9px;
+      border-radius:999px;
+      color:var(--text);
+    }
+
+    .role{
+      padding:12px;
+      border:1px solid rgba(34,48,74,.85);
+      border-radius:14px;
+      background: rgba(11,15,23,.28);
+      margin-top:10px;
+    }
+    .role h3{margin:0; font-size:14px}
+    .role .when{margin-top:4px; font-size:12px; color:var(--muted)}
+    .role p{margin:10px 0 0; color:var(--muted); font-size:13px}
+
+    .footer{
+      margin-top:16px;
+      text-align:center;
+      color:var(--muted);
+      font-size:12px;
+    }
+
+    .anchor{scroll-margin-top:86px;}
+  </style>
 </head>
+
 <body>
+  <!-- Sticky Nav -->
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand">
+        <b>Dulcionor Willian de Oliveira</b>
+        <span>IT Project | ERP | Azure/M365 | ITIL/ServiceNow</span>
+      </div>
 
-<header>
-    <h1>Dulcionor Willian de Oliveira</h1>
-    <p>IT Project Manager | ERP Implementation & Cloud Specialist</p>
-</header>
+      <nav class="links" aria-label="Primary navigation">
+        <a class="chiplink" href="#about">About</a>
+        <a class="chiplink" href="#skills">Skills</a>
+        <a class="chiplink" href="#experience">Experience</a>
+        <a class="chiplink" href="#projects">Projects</a>
+        <a class="chiplink" href="#certs">Certifications</a>
+        <a class="chiplink" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<div class="container">
-    
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Strategic IT Project Manager & Cloud Infrastructure Specialist with over 20 years of experience managing and optimizing hybrid on-premises and cloud environments. I bridge the gap between complex technical execution and high-level business goals, specializing in ERP implementation (Mega Sistemas, RM Totvs), Business Intelligence (Power BI, SQL), and secure infrastructure operations.</p>
-        <p>I bring a deep technical background in Microsoft Technologies (Azure, Windows Server, Entra ID/M365) paired with a proactive management approach to drive service delivery improvements. Currently based in Calgary, AB, my focus is on aligning technology platforms with organizational workflows to ensure data integrity and seamless transitions during complex software rollouts.</p>
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <h1>Dulcionor Willian de Oliveira</h1>
+      <p class="subtitle">
+        IT Project Manager | ERP Implementation & Cloud Infrastructure (Azure/M365) | IT Service Delivery (ITIL)
+      </p>
+
+      <div class="meta">
+        <span class="chip">📍 Calgary, AB, Canada</span>
+        <span class="chip">🧩 20+ years in ERP & IT</span>
+        <span class="chip">🛡️ Governance • Documentation • Resilience</span>
+      </div>
+
+      <div class="cta">
+        <!-- Replace links below -->
+        <a class="btn primary" href="https://www.linkedin.com/in/SEU-LINKEDIN" target="_blank" rel="noreferrer">View LinkedIn</a>
+        <a class="btn" href="mailto:dulcionor@hotmail.com">Email me</a>
+        <a class="btn" href="assets/Dulcionor_Resume.pdf" target="_blank" rel="noreferrer">Download Resume (PDF)</a>
+      </div>
     </section>
 
-    <section id="experience">
-        <h2>Professional Experience & Case Studies</h2>
+    <div class="grid">
+      <!-- LEFT COLUMN -->
+      <div>
+        <!-- ABOUT -->
+        <section id="about" class="card anchor">
+          <h2>About</h2>
+          <p class="muted">
+            Strategic IT Project Manager and Infrastructure Specialist with 20+ years of experience delivering ERP
+            implementations, cloud operations, and service governance improvements.
+            I translate business needs into technical execution, strengthening documentation (SOPs), improving
+            operational discipline, and increasing service reliability in hybrid environments.
+          </p>
 
-        <div class="case-study">
-            <h3>IT Project Management & Operations (DwoTI & CP Construplan)</h3>
-            <span class="tag">ERP Implementation</span>
-            <span class="tag">Power BI & SQL</span>
-            <span class="tag">ITIL / ServiceNow</span>
-            <span class="tag">Microsoft 365</span>
-            <p><strong>The Challenge:</strong> Leading technical teams across multi-site operations, ensuring high-quality service delivery, infrastructure stability, and managing complex systemic migrations.</p>
-            <p><strong>The Solution:</strong> Spearheaded the implementation and optimization of ERP modules and BI tools, translating business requirements into data-driven Power BI dashboards. Provided hands-on infrastructure management, including server migrations, Active Directory, and M365 user lifecycle management. Developed and implemented rigorous Standard Operating Procedures (SOPs).</p>
-            <p><strong>The Result:</strong> Achieved and maintained a <strong>98% SLA compliance rate</strong> through ServiceNow and drastically reduced incident response times by streamlining workflows.</p>
-        </div>
+          <div class="kpi">
+            <div class="box">
+              <b>Service Delivery</b>
+              <span>Incident & Change processes, SLA mindset, operational governance</span>
+            </div>
+            <div class="box">
+              <b>ERP + Business Alignment</b>
+              <span>Mega Sistemas, RM Totvs, process mapping & implementation support</span>
+            </div>
+            <div class="box">
+              <b>Microsoft Stack</b>
+              <span>Azure, Microsoft 365, Entra ID, Windows Server, Active Directory</span>
+            </div>
+            <div class="box">
+              <b>Data & Reporting</b>
+              <span>Power BI + SQL dashboards for operational and executive visibility</span>
+            </div>
+          </div>
+        </section>
 
-        <div class="case-study">
-            <h3>Mechanical Assembly | IT Professional in Transition (CoolIT Systems)</h3>
-            <span class="tag">Canadian Experience</span>
-            <span class="tag">IT Lab Management</span>
-            <span class="tag">Quality Control</span>
-            <span class="tag">Systems Administration Prep</span>
-            <p><strong>Timeline & Location:</strong> Jan 2025 - Present | Calgary, Alberta, Canada (On-site)</p>
-            <p><strong>The Focus:</strong> Actively re-establishing my IT career in the Canadian market while working in a technical assembly role on a full-time contract.</p>
-            <p><strong>Daily Operations:</strong></p>
+        <!-- EXPERIENCE -->
+        <section id="experience" class="card anchor" style="margin-top:16px;">
+          <h2>Professional Experience</h2>
+
+          <div class="role">
+            <h3>IT Project Management & Operations Leadership</h3>
+            <div class="when">Highlights (adapt to your real roles/companies/dates)</div>
             <ul>
-                <li>Interpreting complex technical drawings and standard operating procedures.</li>
-                <li>Ensuring strict quality control and full compliance with workplace safety regulations.</li>
+              <li>Improved service governance using ITIL practices and ITSM workflows (e.g., ServiceNow).</li>
+              <li>Standardized incident triage, categorization, and escalation to increase operational consistency.</li>
+              <li>Led ERP rollouts and process alignment across teams, ensuring adoption and stability.</li>
+              <li>Supported hybrid operations: AD/M365 lifecycle, Windows Server services, and infrastructure reliability.</li>
+              <li>Built SOPs and documentation discipline to improve audit readiness and reduce knowledge gaps.</li>
             </ul>
-            <p><strong>Technological Preparation:</strong> Concurrently building and administering enterprise-style IT lab environments (Active Directory, DNS, DHCP, File Services, Backup, and Monitoring) and preparing for industry certifications. Open to new opportunities in IT Support, Infrastructure, and Systems Administration.</p>
-        </div>
-    </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>I am always open to discussing new opportunities in project management, infrastructure, or strategic IT support.</p>
-        <p>📞 Phone: <strong>+1 (368) 886-6616</strong></p>
-        <p>📧 Email: <a href="mailto:dulcionor@hotmail.com">dulcionor@hotmail.com</a></p>
-        <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/dulcionor-willian-de-oliveira-56102574" target="_blank">Connect with me on LinkedIn</a></p>
-        <p>📍 Location: Calgary, AB - Canada</p>
-    </section>
+            <div class="hr"></div>
+            <p><b>Tip:</b> replace generic lines with measurable outcomes (SLA %, response time, deployment timelines, cost savings).</p>
+          </div>
 
-</div>
+          <div class="role">
+            <h3>ERP Implementation & Business Systems</h3>
+            <div class="when">Mega Sistemas ERP • RM Totvs (adjust)</div>
+            <ul>
+              <li>Requirement gathering, business process mapping, configuration, and user support.</li>
+              <li>Post go-live stabilization, training, and continuous improvement.</li>
+              <li>Integration alignment and reporting support (Power BI/SQL where applicable).</li>
+            </ul>
+          </div>
 
-<footer>
-    <p>&copy; 2026 Dulcionor Willian de Oliveira. Developed with a focus on Results, Governance, and Optimization.</p>
-</footer>
+          <div class="role">
+            <h3>Technical Assembly (Contract) | Canadian Experience</h3>
+            <div class="when">Current</div>
+            <ul>
+              <li>Process discipline, quality standards, and documentation rigor in a structured environment.</li>
+              <li>Continuous IT lab development to maintain hands-on readiness for Microsoft infrastructure roles.</li>
+            </ul>
+          </div>
+        </section>
 
+        <!-- PROJECTS -->
+        <section id="projects" class="card anchor" style="margin-top:16px;">
+          <h2>Projects</h2>
+
+          <div class="role">
+            <h3>Hybrid Infrastructure Lab (On-Prem + Azure)</h3>
+            <p class="muted">
+              Enterprise-style lab simulating real-world operations: AD/DNS redundancy, DHCP, file services,
+              CA, backup, monitoring, and Azure integration testing.
+            </p>
+            <div class="tagrow">
+              <span class="tag">Windows Server</span>
+              <span class="tag">AD DS</span>
+              <span class="tag">DNS/DHCP</span>
+              <span class="tag">Veeam</span>
+              <span class="tag">Monitoring</span>
+              <span class="tag">Azure</span>
+            </div>
+            <p style="margin-top:10px;">
+              <a href="assets/lab-diagram.png" target="_blank" rel="noreferrer">Lab Diagram</a>
+              <span class="muted"> • </span>
+              <a href="assets/lab-notes.pdf" target="_blank" rel="noreferrer">Lab Notes (PDF)</a>
+            </p>
+          </div>
+
+          <div class="role">
+            <h3>Power BI Operational Dashboard (Sample)</h3>
+            <p class="muted">
+              Dashboards for SLA tracking, incident trends, and operational KPIs to support leadership decision-making.
+            </p>
+            <p style="margin-top:10px;">
+              <a href="assets/powerbi-samples.html" target="_blank" rel="noreferrer">Screenshots / Case Study</a>
+            </p>
+          </div>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <aside>
+        <!-- SKILLS -->
+        <section id="skills" class="card anchor">
+          <h2>Core Skills</h2>
+
+          <div class="role">
+            <h3>Cloud & Microsoft</h3>
+            <div class="tagrow">
+              <span class="tag">Azure</span>
+              <span class="tag">Microsoft 365</span>
+              <span class="tag">Entra ID</span>
+              <span class="tag">Windows Server</span>
+              <span class="tag">Active Directory</span>
+            </div>
+          </div>
+
+          <div class="role">
+            <h3>ITSM & Governance</h3>
+            <div class="tagrow">
+              <span class="tag">ITIL</span>
+              <span class="tag">ServiceNow</span>
+              <span class="tag">Incident Management</span>
+              <span class="tag">Change Management</span>
+              <span class="tag">SOPs</span>
+              <span class="tag">SLA</span>
+            </div>
+          </div>
+
+          <div class="role">
+            <h3>ERP & Data</h3>
+            <div class="tagrow">
+              <span class="tag">Mega ERP</span>
+              <span class="tag">RM Totvs</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Process Mapping</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section id="certs" class="card anchor" style="margin-top:16px;">
+          <h2>Certifications & Development</h2>
+          <ul>
+            <li>ITIL (applied in service governance)</li>
+            <li>Azure Infrastructure studies (AZ-800 / AZ-801 lab prep)</li>
+            <li>Continuous learning in cloud security and Microsoft ecosystem</li>
+          </ul>
+          <div class="hr"></div>
+          <p class="muted" style="margin:0;">
+            Tip: add dates, credential IDs, and links (Credly / Microsoft Learn) when available.
+          </p>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="card anchor" style="margin-top:16px;">
+          <h2>Contact</h2>
+          <p class="muted" style="margin-top:0;">
+            Open to opportunities in IT Project Management, Infrastructure/Cloud, and IT Service Delivery.
+          </p>
+          <ul>
+            <li>Email: <a href="mailto:dulcionor@hotmail.com">dulcionor@hotmail.com</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/SEU-LINKEDIN" target="_blank" rel="noreferrer">linkedin.com/in/SEU-LINKEDIN</a></li>
+            <li>GitHub: <a href="https://github.com/DulcionorWillian" target="_blank" rel="noreferrer">github.com/DulcionorWillian</a></li>
+          </ul>
+
+          <div class="cta" style="margin-top:12px;">
+            <a class="btn primary" href="mailto:dulcionor@hotmail.com">Send Email</a>
+            <a class="btn" href="#about">Back to top</a>
+          </div>
+        </section>
+      </aside>
+    </div>
+
+    <p class="footer">
+      © <span id="year"></span> Dulcionor Willian de Oliveira • Built with GitHub Pages
+    </p>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
