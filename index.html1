@@ -1,0 +1,484 @@
+<!doctype html> 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Dulcionor Willian de Oliveira — IT Project Manager | ERP & Cloud Infrastructure | IT Service Delivery (ITIL)" />
+  <title>Dulcionor Willian de Oliveira | IT Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --card: #0f1624;
+      --text: #e7edf7;
+      --muted: #bac5d9; /* Ligeiramente mais claro para melhor contraste */
+      --line: #22304a;
+      --accent: #6ea8fe;
+      --accent2: #7ee787;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --shadow-hover: 0 15px 40px rgba(110,168,254,.15);
+      --radius: 16px;
+      --max: 1000px;
+    }
+
+    * { box-sizing: border-box; }
+    
+    html {
+      height: 100%;
+      scroll-behavior: smooth; /* Rolagem suave ao clicar no menu */
+    }
+    
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(110,168,254,.15), transparent 60%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(126,231,135,.10), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a { color: var(--accent); text-decoration: none; transition: all 0.2s ease; }
+    a:hover { text-decoration: underline; filter: brightness(1.2); }
+    
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 28px 18px 80px; }
+
+    /* Top nav */
+    .nav {
+      display: flex; gap: 14px; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(11,15,23,.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(34,48,74,.6);
+      padding: 12px 18px;
+    }
+    .nav-inner { max-width: var(--max); margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: flex-end; gap: 16px; }
+    
+    .links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
+    .chiplink {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      border: 1px solid rgba(34,48,74,.9);
+      background: rgba(15,22,36,.6);
+      padding: 8px 14px;
+      border-radius: 999px;
+      transition: all 0.3s ease;
+    }
+    .chiplink:hover {
+      border-color: rgba(110,168,254,.7); 
+      background: rgba(110,168,254,.1);
+      text-decoration: none;
+      transform: translateY(-2px);
+    }
+
+    /* Hero */
+    .hero {
+      margin-top: 22px;
+      background: linear-gradient(180deg, rgba(15,22,36,.85), rgba(15,22,36,.55));
+      border: 1px solid rgba(34,48,74,.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 32px 26px;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero:before {
+      content: "";
+      position: absolute; inset: -2px;
+      background: radial-gradient(400px 220px at 20% 10%, rgba(110,168,254,.18), transparent 55%),
+                  radial-gradient(420px 240px at 85% 20%, rgba(126,231,135,.12), transparent 55%);
+      pointer-events: none;
+    }
+    .hero > * { position: relative; }
+    h1 { margin: 0 0 8px; font-size: 36px; letter-spacing: .2px; line-height: 1.2; }
+    .subtitle { margin: 0; color: var(--muted); font-size: 16px; font-weight: 400; }
+    
+    .meta { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 10px; }
+    .chip {
+      border: 1px solid rgba(34,48,74,.9);
+      background: rgba(11,15,23,.5);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    
+    .cta { margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 10px 16px;
+      border-radius: 8px;
+      border: 1px solid rgba(34,48,74,.9);
+      background: rgba(15,22,36,.9);
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+    .btn:hover { 
+      border-color: rgba(110,168,254,.8); 
+      text-decoration: none; 
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,.2);
+    }
+    .btn.primary {
+      background: linear-gradient(90deg, rgba(110,168,254,.9), rgba(126,231,135,.8));
+      border-color: transparent;
+      color: #07101d;
+    }
+    .btn.primary:hover { filter: brightness(1.1); box-shadow: 0 4px 15px rgba(110,168,254,.3); }
+
+    /* Layout */
+    .grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 24px;
+    }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+
+    /* Cards / sections */
+    section.card {
+      background: rgba(15,22,36,.75);
+      border: 1px solid rgba(34,48,74,.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    section.card:hover {
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(110,168,254,.3);
+    }
+    
+    section.card h2 {
+      margin: 0 0 16px;
+      font-size: 20px;
+      color: #fff;
+      border-bottom: 1px solid rgba(34,48,74,.8);
+      padding-bottom: 12px;
+    }
+    
+    .muted { color: var(--muted); }
+    .hr { height: 1px; background: rgba(34,48,74,.8); margin: 16px 0; }
+
+    ul { margin: 12px 0 0 20px; padding: 0; color: var(--muted); }
+    li { margin: 8px 0; }
+    
+    .kpi { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 16px; }
+    @media (max-width: 520px) { .kpi { grid-template-columns: 1fr; } }
+    .kpi .box {
+      border: 1px solid rgba(34,48,74,.85);
+      background: rgba(11,15,23,.4);
+      border-radius: 10px;
+      padding: 16px;
+      transition: all 0.3s ease;
+    }
+    .kpi .box:hover { background: rgba(34,48,74,.4); border-color: rgba(110,168,254,.5); }
+    .kpi .box b { display: block; font-size: 15px; color: #fff; }
+    .kpi .box span { display: block; margin-top: 6px; font-size: 13px; color: var(--muted); line-height: 1.4; }
+
+    .tagrow { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .tag {
+      font-size: 12px;
+      font-weight: 500;
+      border: 1px solid rgba(34,48,74,.85);
+      background: rgba(11,15,23,.5);
+      padding: 6px 12px;
+      border-radius: 6px;
+      color: var(--accent);
+    }
+
+    .role {
+      padding: 18px;
+      border: 1px solid rgba(34,48,74,.85);
+      border-radius: 12px;
+      background: rgba(11,15,23,.4);
+      margin-top: 16px;
+      transition: all 0.3s ease;
+    }
+    .role:hover { border-color: rgba(110,168,254,.4); background: rgba(15,22,36,.8); }
+    .role h3 { margin: 0; font-size: 16px; color: #fff; }
+    .role .when { margin-top: 4px; font-size: 13px; color: var(--accent2); font-weight: 500; }
+    .role p { margin: 12px 0 0; color: var(--muted); font-size: 14px; }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(34,48,74,.6);
+    }
+
+    .anchor { scroll-margin-top: 86px; }
+  </style>
+
+  <script>
+    function togglePhone() {
+      const phone = document.getElementById("phoneNumber");
+      if (phone.style.display === "none" || phone.style.display === "") {
+        phone.style.display = "inline";
+      } else {
+        phone.style.display = "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  
+  <header class="nav">
+    <div class="nav-inner">
+      <nav class="links" aria-label="Primary navigation">
+        <a class="chiplink" href="#about">About</a>
+        <a class="chiplink" href="#experience">Experience</a>
+        <a class="chiplink" href="#projects">Projects</a>
+        <a class="chiplink" href="#skills">Skills & Certs</a>
+        <a class="chiplink" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Dulcionor Willian de Oliveira</h1>
+      <p class="subtitle">
+        IT Project Manager | ERP & Business Systems Specialist | Cloud Infrastructure (Azure/M365)
+      </p>
+
+      <div class="meta">
+        <span class="chip">20+ Years Experience</span>
+        <span class="chip">ERP Implementation & Integration</span>
+        <span class="chip">Process Optimization</span>
+        <span class="chip">Infrastructure Governance</span>
+      </div>
+
+      <div class="cta">
+        <a class="btn primary" href="https://www.linkedin.com/in/dulcionor-willian-de-oliveira-56102574/" target="_blank" rel="noreferrer">View LinkedIn</a>
+        <a class="btn" href="mailto:dulcionor@hotmail.com">Email me</a>
+        <a class="btn" href="#" onclick="togglePhone(); return false;">Call me</a>
+        <span id="phoneNumber" style="display:none; margin-left:10px; font-weight:600; align-self: center; color: var(--accent2);">
+          +1 (368) 886-6616
+        </span>
+      </div>
+    </section>
+
+    <div class="grid">
+      
+      <div>
+        
+        <section id="about" class="card anchor">
+          <h2>About</h2>
+          <p class="muted">
+            Strategic ERP & Business Systems Specialist with 20+ years of experience leading
+            enterprise application implementations, infrastructure design, and cross-platform integration.
+            Experienced in aligning technology with business operations to improve efficiency,
+            data governance, and system reliability.
+          </p>
+          <div class="kpi">
+            <div class="box">
+              <b>Service Delivery</b>
+              <span>Incident & Change processes, SLA mindset, operational governance</span>
+            </div>
+            <div class="box">
+              <b>ERP + Business Alignment</b>
+              <span>Mega Sistemas, RM Totvs, process mapping & implementation support</span>
+            </div>
+            <div class="box">
+              <b>Microsoft Stack</b>
+              <span>Azure, Microsoft 365, Entra ID, Windows Server, Active Directory</span>
+            </div>
+            <div class="box">
+              <b>Data & Reporting</b>
+              <span>Power BI + SQL dashboards for operational and executive visibility</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="experience" class="card anchor" style="margin-top:24px;">
+          <h2>Professional Experience</h2>
+
+          <div class="role">
+            <h3>IT Project Management & Operations Leadership</h3>
+            <div class="when">DwoTI Solucoes em TI & CP Construplan</div>
+            <ul>
+              <li>Improved service governance using ITIL practices and ITSM workflows (ServiceNow), maintaining 98% SLA compliance.</li>
+              <li>Standardized incident triage, categorization, and escalation to increase operational consistency.</li>
+              <li>Led ERP rollouts and process alignment across teams, ensuring adoption and stability.</li>
+              <li>Supported hybrid operations: AD/M365 lifecycle, Windows Server services, and infrastructure reliability.</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <h3>ERP Implementation & Business Systems</h3>
+            <div class="when">Mega Sistemas ERP • RM Totvs</div>
+            <ul>
+              <li>Requirement gathering, business process mapping, configuration, and user support.</li>
+              <li>Post go-live stabilization, training, and continuous improvement.</li>
+              <li>Integration alignment and reporting support (Power BI/SQL where applicable).</li>
+            </ul>
+          </div>
+
+          <div class="role">
+            <h3>Mechanical Assembly (Contract) | IT Professional in Transition</h3>
+            <div class="when">CoolIT Systems | Jan 2025 - Present (Calgary, AB)</div>
+            <ul>
+              <li>Interpreting technical drawings, ensuring quality control, and compliance with safety regulations.</li>
+              <li>Concurrently building enterprise-style IT lab environments (AD, DNS, DHCP, Backup) to maintain readiness.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="projects" class="card anchor" style="margin-top:24px;">
+          <h2>Strategic Projects</h2>
+          
+          <div class="role">
+            <h3>ERP & Business Systems Transformation</h3>
+            <div class="when">CP Construplan Construção</div>
+            <p class="muted" style="margin-top: 4px;">Role: ERP & Business Systems Specialist | IT Project Manager</p>  
+            
+            <div style="margin: 14px 0;">
+              <a href="case1.jpg" target="_blank" class="btn">🔍 View Full Architecture</a>
+            </div>
+            
+            <ul>
+              <li>Led full implementation of Mega Sistemas ERP across financial and operational modules.</li>
+              <li>Integrated Vespera commercial platform and Multidados CRM.</li>
+              <li>Structured data integration between sales, finance, and operations.</li>
+            </ul>
+            <p><strong>Business Impact:</strong> Reduced manual processes, increased operational efficiency, and strengthened cross-department system integration.</p>
+          </div>
+
+          <div class="role">
+            <h3>Hybrid Infrastructure & Disaster Recovery Architecture</h3>
+            <div class="when">DWOTI</div>
+            <p class="muted" style="margin-top: 4px;">Role: Infrastructure Architect</p>
+            
+            <div style="margin: 14px 0;">
+              <a href="case2.jpg" target="_blank" class="btn">🔍 View Full Architecture</a>
+            </div>
+            
+            <ul>
+              <li>Designed dual physical host architecture with Veeam replication.</li>
+              <li>Implemented Hyper-V virtualization for ERP and database environments.</li>
+              <li>Built structured backup strategy with Azure offsite replication.</li>
+            </ul>
+            <p><strong>Business Impact:</strong> Established business continuity framework, reduced downtime risk, and increased infrastructure reliability.</p>
+          </div>
+
+          <div class="role">
+            <h3>Database Oracle Separation & Multi-ERP Integration</h3>
+            <div class="when">Corporate Migration</div>
+            <p class="muted" style="margin-top: 4px;">Role: ERP & Business Systems Specialist | IT Project Manager</p>
+            
+            <div style="margin: 14px 0;">
+              <a href="case3.jpg" target="_blank" class="btn">🔍 View Full Architecture</a>
+            </div>
+            
+            <ul>
+              <li>Led separation of shared Oracle databases to improve scalability and governance.</li>
+              <li>Implemented Mega ERP and RM Totvs (HR system).</li>
+              <li>Managed cross-functional IT team during the transformation phase.</li>
+            </ul>
+            <p><strong>Business Impact:</strong> Increased data governance, improved sales integration, and enhanced enterprise system scalability.</p>
+          </div>
+        </section>
+
+      </div> <aside>
+        
+        <section id="skills" class="card anchor">
+          <h2>Core Skills</h2>
+
+          <div class="role" style="background: transparent; border: none; padding: 0; margin-top: 0;">
+            <h3 style="margin-top: 10px; font-size: 14px;">Cloud & Microsoft</h3>
+            <div class="tagrow">
+              <span class="tag">Azure</span>
+              <span class="tag">Microsoft 365</span>
+              <span class="tag">Entra ID</span>
+              <span class="tag">Windows Server</span>
+              <span class="tag">Active Directory</span>
+            </div>
+
+            <h3 style="margin-top: 20px; font-size: 14px;">ITSM & Governance</h3>
+            <div class="tagrow">
+              <span class="tag">ITIL</span>
+              <span class="tag">ServiceNow</span>
+              <span class="tag">Incident Management</span>
+              <span class="tag">Change Management</span>
+              <span class="tag">SOPs</span>
+              <span class="tag">SLA</span>
+            </div>
+
+            <h3 style="margin-top: 20px; font-size: 14px;">ERP & Data</h3>
+            <div class="tagrow">
+              <span class="tag">Mega ERP</span>
+              <span class="tag">RM Totvs</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">SQL</span>
+              <span class="tag">Process Mapping</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="certs" class="card anchor" style="margin-top:24px;">
+          <h2>Education & Certs</h2>
+          <ul style="margin-left: 0; list-style-type: none;">
+            <li style="margin-bottom: 14px;">
+              <strong style="color: #fff;">Bachelor’s Degree in Computer Science</strong><br>
+              <span class="muted">Universidade Paulista (UNIP)</span>
+            </li>
+            <li style="margin-bottom: 14px;">
+              <strong style="color: #fff;">MCSA: Windows Server 2012</strong><br>
+              <span class="muted">Microsoft</span>
+            </li>
+            <li style="margin-bottom: 14px;">
+              <strong style="color: #fff;">Microsoft SQL & Power BI</strong><br>
+              <span class="muted">Specialized Training</span>
+            </li>
+            <li style="margin-bottom: 14px;">
+              <strong style="color: #fff;">NetSuite Complete Fundamentals</strong><br>
+              <span class="muted">Udemy</span>
+            </li>
+            <li style="margin-bottom: 14px;">
+              <strong style="color: var(--accent2);">In Progress:</strong><br>
+              <span class="muted">Azure Administrator (AZ-800 / 801), CompTIA Network+</span>
+            </li>
+          </ul>
+        </section>
+
+        <section id="contact" class="card anchor" style="margin-top:24px;">
+          <h2>Contact</h2>
+          <p class="muted" style="margin-top:0; font-size: 14px;">
+            Open to opportunities in IT Project Management, Infrastructure/Cloud, and IT Service Delivery in Canada.
+          </p>
+          <ul style="margin-left: 0; list-style-type: none; font-size: 14px;">
+            <li style="margin-bottom: 8px;">📞 <a href="tel:+13688866616">(368) 886-6616</a></li>
+            <li style="margin-bottom: 8px;">📧 <a href="mailto:dulcionor@hotmail.com">dulcionor@hotmail.com</a></li>
+            <li style="margin-bottom: 8px;">🔗 <a href="https://www.linkedin.com/in/dulcionor-willian-de-oliveira-56102574/" target="_blank" rel="noreferrer">LinkedIn Profile</a></li>
+            <li style="margin-bottom: 8px;">💻 <a href="https://github.com/DulcionorWillian" target="_blank" rel="noreferrer">GitHub Profile</a></li>
+          </ul>
+
+          <div class="cta" style="margin-top:20px;">
+            <a class="btn primary" href="mailto:dulcionor@hotmail.com" style="width: 100%;">Send Email</a>
+          </div>
+        </section>
+
+      </aside> </div>
+
+    <p class="footer">
+      © <span id="year"></span> Dulcionor Willian de Oliveira • Built with GitHub Pages
+    </p>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
