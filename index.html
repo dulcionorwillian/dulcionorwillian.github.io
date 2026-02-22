@@ -178,17 +178,37 @@
       font-size:12px;
     }
 
+  #phoneNumber {
+  margin-left: 12px;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.phone-visible {
+  opacity: 1;
+}
+
+.phone-hidden {
+  opacity: 0;
+}
+
     .anchor{scroll-margin-top:86px;}
   </style>
 </head>
       <script>
 function togglePhone() {
   const phone = document.getElementById("phoneNumber");
+  const btn = document.getElementById("phoneBtn");
 
-  if (phone.style.display === "none" || phone.style.display === "") {
-    phone.style.display = "inline";
+  if (phone.classList.contains("phone-hidden")) {
+    phone.classList.remove("phone-hidden");
+    phone.classList.add("phone-visible");
+    btn.innerHTML = "❌ Hide number";
   } else {
-    phone.style.display = "none";
+    phone.classList.remove("phone-visible");
+    phone.classList.add("phone-hidden");
+    btn.innerHTML = "📞 Call me";
   }
 }
 </script>
@@ -231,7 +251,11 @@ function togglePhone() {
         <a class="btn primary" href="https://www.linkedin.com/in/dulcionor-willian-de-oliveira-56102574/" target="_blank" rel="noreferrer">View LinkedIn</a>
         <a class="btn" href="mailto:dulcionor@hotmail.com">Email me</a>
         <a class="btn" href="#" onclick="togglePhone(); return false;">Call me</a>
-<span id="phoneNumber" style="display:none; margin-left:10px; font-weight:600;">
+<a class="btn" href="#" id="phoneBtn" onclick="togglePhone(); return false;">
+  📞 Call me
+</a>
+
+<span id="phoneNumber" class="phone-hidden">
   +1 (368) 886-6616
 </span>
         <!--<a class="btn" href="assets/Dulcionor_Resume.pdf" target="_blank" rel="noreferrer">Download Resume (PDF)</a> -->
