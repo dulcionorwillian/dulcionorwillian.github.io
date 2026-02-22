@@ -181,10 +181,15 @@
     .anchor{scroll-margin-top:86px;}
   </style>
 </head>
-<script>
-function showPhone() {
+      <script>
+function togglePhone() {
   const phone = document.getElementById("phoneNumber");
-  phone.style.display = "inline";
+
+  if (phone.style.display === "none" || phone.style.display === "") {
+    phone.style.display = "inline";
+  } else {
+    phone.style.display = "none";
+  }
 }
 </script>
 <body>
@@ -225,7 +230,7 @@ function showPhone() {
         <!-- Replace links below -->
         <a class="btn primary" href="https://www.linkedin.com/in/dulcionor-willian-de-oliveira-56102574/" target="_blank" rel="noreferrer">View LinkedIn</a>
         <a class="btn" href="mailto:dulcionor@hotmail.com">Email me</a>
-        <a class="btn" href="#" onclick="showPhone(); return false;">Call me</a>
+        <a class="btn" href="#" onclick="togglePhone(); return false;">Call me</a>
 <span id="phoneNumber" style="display:none; margin-left:10px; font-weight:600;">
   +1 (368) 886-6616
 </span>
