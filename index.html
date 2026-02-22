@@ -181,7 +181,12 @@
     .anchor{scroll-margin-top:86px;}
   </style>
 </head>
-
+<script>
+function showPhone() {
+  const phone = document.getElementById("phoneNumber");
+  phone.style.display = "inline";
+}
+</script>
 <body>
   <!-- Sticky Nav -->
   <header class="nav">
@@ -220,7 +225,10 @@
         <!-- Replace links below -->
         <a class="btn primary" href="https://www.linkedin.com/in/dulcionor-willian-de-oliveira-56102574/" target="_blank" rel="noreferrer">View LinkedIn</a>
         <a class="btn" href="mailto:dulcionor@hotmail.com">Email me</a>
-        <a class="btn" href="tel:+13688866616">Call me</a>
+        <a class="btn" href="#" onclick="showPhone(); return false;">Call me</a>
+<span id="phoneNumber" style="display:none; margin-left:10px; font-weight:600;">
+  +1 (368) 886-6616
+</span>
         <!--<a class="btn" href="assets/Dulcionor_Resume.pdf" target="_blank" rel="noreferrer">Download Resume (PDF)</a> -->
       </div>
     </section>
