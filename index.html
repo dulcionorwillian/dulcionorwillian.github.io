@@ -3,8 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Dulcionor Willian de Oliveira — IT Project Manager | ERP & Cloud Infrastructure | IT Service Delivery (ITIL)" />
-  <title>Dulcionor Willian de Oliveira | IT Portfolio</title>
+  <meta name="description" content="Calgary-based Microsoft infrastructure, ERP/CRM integration and IT governance professional with 20+ years of experience improving reliability, delivery time and technology costs." />
+  <link rel="canonical" href="https://dulcionorwillian.github.io/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Dulcionor Willian de Oliveira | Microsoft Infrastructure & Systems Administrator" />
+  <meta property="og:description" content="Windows Server, Active Directory, Microsoft 365, Hyper-V, Veeam, Fortinet and hybrid infrastructure professional based in Calgary." />
+  <meta property="og:url" content="https://dulcionorwillian.github.io/" />
+  <title>Dulcionor Willian de Oliveira | Microsoft Infrastructure & Systems Administrator</title>
+  <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"Dulcionor Willian de Oliveira","url":"https://dulcionorwillian.github.io/","jobTitle":"Microsoft Infrastructure and Systems Administrator","address":{"@type":"PostalAddress","addressLocality":"Calgary","addressRegion":"AB","addressCountry":"CA"},"sameAs":["https://www.linkedin.com/in/dulcionor-willian-de-oliveira-56102574/","https://github.com/DulcionorWillian"],"knowsAbout":["Windows Server","Active Directory","Microsoft 365","Hyper-V","Veeam Backup and Replication","Fortinet","PowerShell","Azure hybrid infrastructure"]}
+  </script>
 
   <style>
     :root {
@@ -18,7 +26,7 @@
       --shadow: 0 10px 30px rgba(0,0,0,.35);
       --shadow-hover: 0 15px 40px rgba(110,168,254,.15);
       --radius: 16px;
-      --max: 1000px;
+      --max: 1160px;
     }
 
     * { box-sizing: border-box; }
@@ -54,6 +62,9 @@
       padding: 12px 18px;
     }
     .nav-inner { max-width: var(--max); margin: 0 auto; width: 100%; display: flex; align-items: center; justify-content: flex-end; gap: 16px; }
+    .language-switch { display:flex; gap:4px; padding:3px; border:1px solid rgba(34,48,74,.9); border-radius:999px; background:rgba(15,22,36,.75); }
+    .language-switch button { border:0; border-radius:999px; padding:6px 9px; color:var(--muted); background:transparent; cursor:pointer; font:inherit; font-size:12px; font-weight:700; }
+    .language-switch button.active { color:#07101f; background:var(--accent); }
     
     .links { display: flex; gap: 12px; flex-wrap: wrap; justify-content: flex-end; }
     .chiplink {
@@ -137,7 +148,7 @@
     .grid {
       margin-top: 24px;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1fr;
       gap: 24px;
     }
     @media (max-width: 900px) {
@@ -207,7 +218,16 @@
     .role:hover { border-color: rgba(110,168,254,.4); background: rgba(15,22,36,.8); }
     .role h3 { margin: 0; font-size: 16px; color: #fff; }
     .role .when { margin-top: 4px; font-size: 13px; color: var(--accent2); font-weight: 500; }
-    .role p { margin: 12px 0 0; color: var(--muted); font-size: 14px; }
+    .role p { margin: 12px 0 0; color: var(--muted); font-size: 15px; }
+
+    aside { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    aside section.card { margin-top: 0 !important; }
+    .project-image { width: 100%; max-height: 360px; object-fit: contain; border: 1px solid var(--line); border-radius: 10px; background: #0b0f17; margin: 14px 0; }
+    .project-featured { border-color: rgba(110,168,254,.55); background: linear-gradient(135deg, rgba(20,40,66,.82), rgba(11,15,23,.48)); }
+    .project-facts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 14px 0; }
+    .project-facts span { border: 1px solid var(--line); border-radius: 8px; padding: 10px; color: var(--muted); font-size: 13px; text-align: center; }
+    @media (max-width: 900px) { aside { grid-template-columns: 1fr; } }
+    @media (max-width: 620px) { .project-facts { grid-template-columns: 1fr; } .hero { padding: 26px 20px; } h1 { font-size: 30px; } }
 
     .footer {
       margin-top: 40px;
@@ -243,6 +263,10 @@
         <a class="chiplink" href="#skills">Skills & Certs</a>
         <a class="chiplink" href="#contact">Contact</a>
       </nav>
+      <div class="language-switch" aria-label="Language / Idioma">
+        <button type="button" class="active" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="pt" aria-pressed="false">PT</button>
+      </div>
     </div>
   </header>
 
@@ -250,23 +274,23 @@
     <section class="hero">
       <h1>Dulcionor Willian de Oliveira</h1>
       <p class="subtitle">
-        IT Project Manager | ERP & Business Systems Specialist | Cloud Infrastructure (Azure/M365)
+        Microsoft Infrastructure | ERP & Business Systems | IT Governance
       </p>
 
       <div class="meta">
         <span class="chip">20+ Years Experience</span>
-        <span class="chip">ERP Implementation & Integration</span>
-        <span class="chip">Process Optimization</span>
-        <span class="chip">Infrastructure Governance</span>
+        <span class="chip">Windows Server & Active Directory</span>
+        <span class="chip">Microsoft 365 & Azure Hybrid</span>
+        <span class="chip">Veeam & Disaster Recovery</span>
+        <span class="chip">Fortinet & Secure Connectivity</span>
+        <span class="chip">ERP & CRM Integration</span>
+        <span class="chip">IT Governance & Cost Optimization</span>
       </div>
 
       <div class="cta">
-        <a class="btn primary" href="https://www.linkedin.com/in/dulcionor-willian-de-oliveira-56102574/" target="_blank" rel="noreferrer">View LinkedIn</a>
-        <a class="btn" href="mailto:dulcionor@hotmail.com">Email me</a>
-        <a class="btn" href="#" onclick="togglePhone(); return false;">Call me</a>
-        <span id="phoneNumber" style="display:none; margin-left:10px; font-weight:600; align-self: center; color: var(--accent2);">
-          +1 (368) 886-6616
-        </span>
+        <a class="btn primary" href="#projects">View Projects</a>
+        <a class="btn" href="https://www.linkedin.com/in/dulcionor-willian-de-oliveira-56102574/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a class="btn" href="mailto:dulcionor@gmail.com">Email Me</a>
       </div>
     </section>
 
@@ -277,27 +301,36 @@
         <section id="about" class="card anchor">
           <h2>About</h2>
           <p class="muted">
-            Strategic ERP & Business Systems Specialist with 20+ years of experience leading
-            enterprise application implementations, infrastructure design, and cross-platform integration.
-            Experienced in aligning technology with business operations to improve efficiency,
-            data governance, and system reliability.
+            Hands-on IT infrastructure professional with 20+ years of experience designing, supporting,
+            and modernizing Microsoft environments. Specialized in Windows Server, Active Directory,
+            Microsoft 365, Hyper-V, Veeam, Fortinet, backup, disaster recovery, and hybrid infrastructure.
+            Complementary experience leading ERP, CRM, and business systems implementations, rationalizing
+            application portfolios, accelerating delivery, and reducing unnecessary technology costs.
           </p>
           <div class="kpi">
             <div class="box">
-              <b>Service Delivery</b>
-              <span>Incident & Change processes, SLA mindset, operational governance</span>
+              <b>Microsoft Infrastructure</b>
+              <span>Windows Server, AD DS, DNS, DHCP, GPO, DFS, identity and file services</span>
             </div>
             <div class="box">
-              <b>ERP + Business Alignment</b>
-              <span>Mega Sistemas, RM Totvs, process mapping & implementation support</span>
+              <b>Virtualization & Recovery</b>
+              <span>Hyper-V, Veeam Backup & Replication, Azure recovery and business continuity</span>
             </div>
             <div class="box">
-              <b>Microsoft Stack</b>
-              <span>Azure, Microsoft 365, Entra ID, Windows Server, Active Directory</span>
+              <b>Cloud & Collaboration</b>
+              <span>Azure hybrid services, Microsoft 365, Entra ID, Exchange Online, Teams and SharePoint</span>
             </div>
             <div class="box">
-              <b>Data & Reporting</b>
-              <span>Power BI + SQL dashboards for operational and executive visibility</span>
+              <b>Network & Security</b>
+              <span>Fortinet/FortiGate, VPN, secure remote access, certificates and incident response</span>
+            </div>
+            <div class="box">
+              <b>ERP & Systems Integration</b>
+              <span>Mega ERP, RM Totvs, CRM, Oracle and cross-platform business process integration</span>
+            </div>
+            <div class="box">
+              <b>IT Governance & Cost Optimization</b>
+              <span>Application rationalization, vendor coordination, process standardization and delivery governance</span>
             </div>
           </div>
         </section>
@@ -306,69 +339,85 @@
           <h2>Professional Experience</h2>
 
           <div class="role">
-            <h3>IT Project Management & Operations Leadership</h3>
-            <div class="when">DwoTI Solucoes em TI & CP Construplan</div>
+            <h3>Mechanical Assembly Technician</h3>
+            <div class="when">CoolIT Systems | 2024–Present | Calgary, AB</div>
             <ul>
-              <li>Improved service governance using ITIL practices and ITSM workflows (ServiceNow), maintaining 98% SLA compliance.</li>
-              <li>Standardized incident triage, categorization, and escalation to increase operational consistency.</li>
-              <li>Led ERP rollouts and process alignment across teams, ensuring adoption and stability.</li>
-              <li>Supported hybrid operations: AD/M365 lifecycle, Windows Server services, and infrastructure reliability.</li>
+              <li>Work in a safety- and quality-driven Canadian production environment requiring accurate documentation and technical troubleshooting.</li>
+              <li>Continue hands-on Microsoft infrastructure development through Windows Server, Azure hybrid, PowerShell and backup/recovery labs.</li>
             </ul>
           </div>
 
           <div class="role">
-            <h3>ERP Implementation & Business Systems</h3>
-            <div class="when">Mega Sistemas ERP • RM Totvs</div>
+            <h3>IT Support Analyst / Systems Support</h3>
+            <div class="when">CP Construction Group | 2018–2023</div>
             <ul>
-              <li>Requirement gathering, business process mapping, configuration, and user support.</li>
-              <li>Post go-live stabilization, training, and continuous improvement.</li>
-              <li>Integration alignment and reporting support (Power BI/SQL where applicable).</li>
+              <li>Administered Windows Server, Active Directory, DNS, DHCP, Group Policy and Microsoft 365 for multi-site operations.</li>
+              <li>Led improvements across virtualization, networking, backup, disaster recovery, security and application availability.</li>
+              <li>Coordinated vendors and infrastructure projects while translating operational requirements into reliable solutions.</li>
             </ul>
           </div>
 
           <div class="role">
-            <h3>Mechanical Assembly (Contract) | IT Professional in Transition</h3>
-            <div class="when">CoolIT Systems | Jan 2025 - Present (Calgary, AB)</div>
+            <h3>IT Infrastructure & Support Specialist</h3>
+            <div class="when">DWO IT | 2012–2018</div>
             <ul>
-              <li>Interpreting technical drawings, ensuring quality control, and compliance with safety regulations.</li>
-              <li>Concurrently building enterprise-style IT lab environments (AD, DNS, DHCP, Backup) to maintain readiness.</li>
+              <li>Designed and supported Windows Server, Active Directory, Microsoft 365 and Hyper-V environments for SMB clients.</li>
+              <li>Configured Fortinet firewalls, VPNs, site connectivity, DNS, DHCP and secure remote access.</li>
+              <li>Implemented Veeam backup, recovery testing, infrastructure upgrades and cloud-connected recovery services.</li>
             </ul>
           </div>
+
         </section>
 
         <section id="projects" class="card anchor" style="margin-top:24px;">
-          <h2>Strategic Projects</h2>
+          <h2>Infrastructure, ERP & Systems Projects</h2>
+
+          <div class="role project-featured">
+            <h3>Windows Server 2025 Hybrid Administration Lab</h3>
+            <div class="when">Hands-on Lab | AZ-800 / AZ-801 Development</div>
+            <p class="muted" style="margin-top: 4px;">Purpose: Maintain current enterprise Microsoft infrastructure skills through a documented lab environment.</p>
+            <div class="project-facts">
+              <span>2 Domain Controllers</span><span>AD CS / PKI</span><span>PowerShell + Veeam</span>
+            </div>
+            <ul>
+              <li>Deployed redundant AD DS and DNS, DHCP, DFS and Windows file services.</li>
+              <li>Configured AD CS/PKI, certificate auto-enrollment, Windows Admin Center and WinRM over HTTPS.</li>
+              <li>Built Hyper-V networking, NAT, PowerShell administration and Veeam backup workflows.</li>
+              <li>Prepared the environment for Entra ID, Azure hybrid administration and automation development.</li>
+            </ul>
+          </div>
           
           <div class="role">
             <h3>ERP & Business Systems Transformation</h3>
             <div class="when">CP Construplan Construção</div>
             <p class="muted" style="margin-top: 4px;">Role: ERP & Business Systems Specialist | IT Project Manager</p>  
             
-            <div style="margin: 14px 0;">
-              <a href="case1.jpg" target="_blank" class="btn">🔍 View Full Architecture</a>
-            </div>
+            <a href="case1.jpg" target="_blank"><img class="project-image" src="case1.jpg" alt="ERP and business systems transformation architecture diagram"></a>
             
             <ul>
-              <li>Led full implementation of Mega Sistemas ERP across financial and operational modules.</li>
+              <li>Led the implementation of Mega Sistemas ERP across financial and operational modules, aligning technology with business processes.</li>
               <li>Integrated Vespera commercial platform and Multidados CRM.</li>
-              <li>Structured data integration between sales, finance, and operations.</li>
+              <li>Mapped requirements and structured data integration between sales, finance, and operations.</li>
+              <li>Rationalized overlapping tools and workflows to reduce avoidable licensing, support effort, and implementation friction.</li>
             </ul>
-            <p><strong>Business Impact:</strong> Reduced manual processes, increased operational efficiency, and strengthened cross-department system integration.</p>
+            <p><strong>Business Impact:</strong> Reduced manual work and unnecessary tool overlap, accelerated adoption, strengthened governance, and simplified cross-department support.</p>
           </div>
 
-          <div class="role">
+          <div class="role project-featured">
             <h3>Hybrid Infrastructure & Disaster Recovery Architecture</h3>
             <div class="when">DWOTI</div>
             <p class="muted" style="margin-top: 4px;">Role: Infrastructure Architect</p>
             
-            <div style="margin: 14px 0;">
-              <a href="case2.jpg" target="_blank" class="btn">🔍 View Full Architecture</a>
+            <a href="case2.jpg" target="_blank"><img class="project-image" src="case2.jpg" alt="Hybrid Microsoft infrastructure and disaster recovery architecture diagram"></a>
+            <div class="project-facts">
+              <span>2 Clustered Hosts</span><span>Approximately 20 VMs</span><span>Veeam + Azure Recovery</span>
             </div>
             
             <ul>
               <li>Designed dual physical host architecture with Veeam replication.</li>
               <li>Implemented Hyper-V virtualization for ERP and database environments.</li>
               <li>Built structured backup strategy with Azure offsite replication.</li>
+              <li>Recovered business-critical services in under 24 hours following a ransomware incident.</li>
             </ul>
             <p><strong>Business Impact:</strong> Established business continuity framework, reduced downtime risk, and increased infrastructure reliability.</p>
           </div>
@@ -378,14 +427,13 @@
             <div class="when">Corporate Migration</div>
             <p class="muted" style="margin-top: 4px;">Role: ERP & Business Systems Specialist | IT Project Manager</p>
             
-            <div style="margin: 14px 0;">
-              <a href="case3.jpg" target="_blank" class="btn">🔍 View Full Architecture</a>
-            </div>
+            <a href="case3.jpg" target="_blank"><img class="project-image" src="case3.jpg" alt="Oracle database separation and multi-ERP integration architecture diagram"></a>
             
             <ul>
               <li>Led separation of shared Oracle databases to improve scalability and governance.</li>
               <li>Implemented Mega ERP and RM Totvs (HR system).</li>
-              <li>Managed cross-functional IT team during the transformation phase.</li>
+              <li>Managed the cross-functional IT team, vendors, requirements, risks, and rollout governance during the transformation.</li>
+              <li>Standardized integration and ownership practices to reduce duplicated effort and long-term support costs.</li>
             </ul>
             <p><strong>Business Impact:</strong> Increased data governance, improved sales integration, and enhanced enterprise system scalability.</p>
           </div>
@@ -397,32 +445,48 @@
           <h2>Core Skills</h2>
 
           <div class="role" style="background: transparent; border: none; padding: 0; margin-top: 0;">
-            <h3 style="margin-top: 10px; font-size: 14px;">Cloud & Microsoft</h3>
+            <h3 style="margin-top: 10px; font-size: 14px;">Systems & Identity</h3>
             <div class="tagrow">
-              <span class="tag">Azure</span>
-              <span class="tag">Microsoft 365</span>
-              <span class="tag">Entra ID</span>
               <span class="tag">Windows Server</span>
               <span class="tag">Active Directory</span>
+              <span class="tag">Entra ID</span>
+              <span class="tag">Group Policy</span>
+              <span class="tag">DNS / DHCP</span>
+              <span class="tag">DFS</span>
+              <span class="tag">AD CS / PKI</span>
             </div>
 
-            <h3 style="margin-top: 20px; font-size: 14px;">ITSM & Governance</h3>
+            <h3 style="margin-top: 20px; font-size: 14px;">Cloud & Collaboration</h3>
             <div class="tagrow">
-              <span class="tag">ITIL</span>
-              <span class="tag">ServiceNow</span>
-              <span class="tag">Incident Management</span>
-              <span class="tag">Change Management</span>
-              <span class="tag">SOPs</span>
-              <span class="tag">SLA</span>
+              <span class="tag">Azure IaaS</span>
+              <span class="tag">Microsoft 365</span>
+              <span class="tag">Exchange Online</span>
+              <span class="tag">Teams</span>
+              <span class="tag">SharePoint</span>
+              <span class="tag">OneDrive</span>
             </div>
 
-            <h3 style="margin-top: 20px; font-size: 14px;">ERP & Data</h3>
+            <h3 style="margin-top: 20px; font-size: 14px;">Virtualization, Network & Resilience</h3>
             <div class="tagrow">
-              <span class="tag">Mega ERP</span>
-              <span class="tag">RM Totvs</span>
-              <span class="tag">Power BI</span>
-              <span class="tag">SQL</span>
-              <span class="tag">Process Mapping</span>
+              <span class="tag">Hyper-V</span>
+              <span class="tag">Veeam</span>
+              <span class="tag">Fortinet / FortiGate</span>
+              <span class="tag">VPN</span>
+              <span class="tag">Disaster Recovery</span>
+              <span class="tag">PowerShell</span>
+            </div>
+
+            <h3 style="margin-top: 20px; font-size: 14px;">ERP, CRM & Integration</h3>
+            <div class="tagrow">
+              <span class="tag">Mega ERP</span><span class="tag">RM Totvs</span><span class="tag">Vespera</span>
+              <span class="tag">Multidados CRM</span><span class="tag">Oracle</span><span class="tag">Process Mapping</span>
+            </div>
+
+            <h3 style="margin-top: 20px; font-size: 14px;">Governance & Delivery</h3>
+            <div class="tagrow">
+              <span class="tag">IT Project Delivery</span><span class="tag">Vendor Management</span>
+              <span class="tag">Application Rationalization</span><span class="tag">Cost Optimization</span>
+              <span class="tag">Change & Incident Management</span><span class="tag">Documentation</span>
             </div>
           </div>
         </section>
@@ -448,7 +512,7 @@
             </li>
             <li style="margin-bottom: 14px;">
               <strong style="color: var(--accent2);">In Progress:</strong><br>
-              <span class="muted">Azure Administrator (AZ-800 / 801), CompTIA Network+</span>
+              <span class="muted">Windows Server Hybrid Administrator (AZ-800 / AZ-801), Azure administration, Intune and VMware</span>
             </li>
           </ul>
         </section>
@@ -456,17 +520,17 @@
         <section id="contact" class="card anchor" style="margin-top:24px;">
           <h2>Contact</h2>
           <p class="muted" style="margin-top:0; font-size: 14px;">
-            Open to opportunities in IT Project Management, Infrastructure/Cloud, and IT Service Delivery in Canada.
+            Open to Systems Administrator, Infrastructure Analyst, Microsoft 365, hybrid cloud, and IT service delivery opportunities in Calgary and across Canada.
           </p>
           <ul style="margin-left: 0; list-style-type: none; font-size: 14px;">
             <li style="margin-bottom: 8px;">📞 <a href="tel:+13688866616">(368) 886-6616</a></li>
-            <li style="margin-bottom: 8px;">📧 <a href="mailto:dulcionor@hotmail.com">dulcionor@hotmail.com</a></li>
+            <li style="margin-bottom: 8px;">📧 <a href="mailto:dulcionor@gmail.com">dulcionor@gmail.com</a></li>
             <li style="margin-bottom: 8px;">🔗 <a href="https://www.linkedin.com/in/dulcionor-willian-de-oliveira-56102574/" target="_blank" rel="noreferrer">LinkedIn Profile</a></li>
             <li style="margin-bottom: 8px;">💻 <a href="https://github.com/DulcionorWillian" target="_blank" rel="noreferrer">GitHub Profile</a></li>
           </ul>
 
           <div class="cta" style="margin-top:20px;">
-            <a class="btn primary" href="mailto:dulcionor@hotmail.com" style="width: 100%;">Send Email</a>
+            <a class="btn primary" href="mailto:dulcionor@gmail.com" style="width: 100%;">Send Email</a>
           </div>
         </section>
 
@@ -483,6 +547,100 @@
   </main>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    const translations = {
+      ".links a:nth-child(1)":"Sobre", ".links a:nth-child(2)":"Experiência", ".links a:nth-child(3)":"Projetos",
+      ".links a:nth-child(4)":"Competências e certificações", ".links a:nth-child(5)":"Contato",
+      ".subtitle":"Infraestrutura Microsoft | ERP e Sistemas de Gestão | Governança de TI",
+      ".meta .chip:nth-child(1)":"Mais de 20 anos de experiência", ".meta .chip:nth-child(2)":"Windows Server e Active Directory",
+      ".meta .chip:nth-child(3)":"Microsoft 365 e Azure híbrido", ".meta .chip:nth-child(4)":"Veeam e recuperação de desastres",
+      ".meta .chip:nth-child(5)":"Fortinet e conectividade segura", ".meta .chip:nth-child(6)":"Integração de ERP e CRM",
+      ".meta .chip:nth-child(7)":"Governança de TI e otimização de custos",
+      ".hero .cta a:nth-child(1)":"Ver projetos", ".hero .cta a:nth-child(3)":"Enviar e-mail",
+      "#about h2":"Sobre",
+      "#about > p":"Profissional hands-on de TI com mais de 20 anos de experiência no projeto, suporte e modernização de ambientes Microsoft, com especialização em Windows Server, Active Directory, Microsoft 365, Hyper-V, Veeam, Fortinet, backup, recuperação de desastres e infraestrutura híbrida. Experiência complementar liderando implementações de ERP, CRM e sistemas de gestão, racionalizando o portfólio de aplicações, acelerando entregas e reduzindo custos desnecessários de tecnologia.",
+      "#about .box:nth-child(1) b":"Infraestrutura Microsoft", "#about .box:nth-child(1) span":"Windows Server, AD DS, DNS, DHCP, GPO, DFS, identidade e serviços de arquivos",
+      "#about .box:nth-child(2) b":"Virtualização e recuperação", "#about .box:nth-child(2) span":"Hyper-V, Veeam Backup & Replication, recuperação no Azure e continuidade de negócios",
+      "#about .box:nth-child(3) b":"Nuvem e colaboração", "#about .box:nth-child(3) span":"Serviços híbridos Azure, Microsoft 365, Entra ID, Exchange Online, Teams e SharePoint",
+      "#about .box:nth-child(4) b":"Redes e segurança", "#about .box:nth-child(4) span":"Fortinet/FortiGate, VPN, acesso remoto seguro, certificados e resposta a incidentes",
+      "#about .box:nth-child(5) b":"Integração de ERP e sistemas", "#about .box:nth-child(5) span":"Mega ERP, RM Totvs, CRM, Oracle e integração de processos de negócio entre plataformas",
+      "#about .box:nth-child(6) b":"Governança e otimização de custos", "#about .box:nth-child(6) span":"Racionalização de aplicações, coordenação de fornecedores, padronização de processos e governança de entregas",
+      "#experience h2":"Experiência profissional",
+      "#experience .role:nth-of-type(1) h3":"Técnico de montagem mecânica",
+      "#experience .role:nth-of-type(1) li:nth-child(1)":"Atuação em ambiente canadense de produção orientado por segurança e qualidade, com documentação precisa e solução de problemas técnicos.",
+      "#experience .role:nth-of-type(1) li:nth-child(2)":"Desenvolvimento contínuo em infraestrutura Microsoft por meio de laboratórios de Windows Server, Azure híbrido, PowerShell e backup/recuperação.",
+      "#experience .role:nth-of-type(2) h3":"Analista de suporte de TI / Suporte de sistemas",
+      "#experience .role:nth-of-type(2) li:nth-child(1)":"Administração de Windows Server, Active Directory, DNS, DHCP, Group Policy e Microsoft 365 para operações em múltiplas unidades.",
+      "#experience .role:nth-of-type(2) li:nth-child(2)":"Liderança de melhorias em virtualização, redes, backup, recuperação de desastres, segurança e disponibilidade de aplicações.",
+      "#experience .role:nth-of-type(2) li:nth-child(3)":"Coordenação de fornecedores e projetos de infraestrutura, traduzindo necessidades operacionais em soluções confiáveis.",
+      "#experience .role:nth-of-type(3) h3":"Especialista em infraestrutura e suporte de TI",
+      "#experience .role:nth-of-type(3) li:nth-child(1)":"Projeto e suporte de ambientes Windows Server, Active Directory, Microsoft 365 e Hyper-V para clientes SMB.",
+      "#experience .role:nth-of-type(3) li:nth-child(2)":"Configuração de firewalls Fortinet, VPNs, conectividade entre unidades, DNS, DHCP e acesso remoto seguro.",
+      "#experience .role:nth-of-type(3) li:nth-child(3)":"Implementação de Veeam, testes de recuperação, atualizações de infraestrutura e serviços de recuperação conectados à nuvem.",
+      "#projects h2":"Projetos de infraestrutura, ERP e sistemas",
+      "#projects .role:nth-of-type(1) h3":"Laboratório de administração híbrida Windows Server 2025",
+      "#projects .role:nth-of-type(1) > p.muted":"Objetivo: manter conhecimentos atuais de infraestrutura Microsoft corporativa por meio de um ambiente de laboratório documentado.",
+      "#projects .role:nth-of-type(1) .project-facts span:nth-child(1)":"2 controladores de domínio", "#projects .role:nth-of-type(1) .project-facts span:nth-child(3)":"PowerShell + Veeam",
+      "#projects .role:nth-of-type(1) li:nth-child(1)":"Implantação de AD DS e DNS redundantes, DHCP, DFS e serviços de arquivos Windows.",
+      "#projects .role:nth-of-type(1) li:nth-child(2)":"Configuração de AD CS/PKI, registro automático de certificados, Windows Admin Center e WinRM sobre HTTPS.",
+      "#projects .role:nth-of-type(1) li:nth-child(3)":"Construção de redes Hyper-V, NAT, administração com PowerShell e fluxos de backup Veeam.",
+      "#projects .role:nth-of-type(1) li:nth-child(4)":"Preparação do ambiente para Entra ID, administração híbrida Azure e desenvolvimento de automações.",
+      "#projects .role:nth-of-type(2) h3":"Transformação de ERP e sistemas de gestão",
+      "#projects .role:nth-of-type(2) > p.muted":"Função: Especialista em ERP e sistemas de gestão | Gerente de projetos de TI",
+      "#projects .role:nth-of-type(2) li:nth-child(1)":"Liderança da implementação do Mega Sistemas ERP nos módulos financeiros e operacionais, alinhando tecnologia aos processos de negócio.",
+      "#projects .role:nth-of-type(2) li:nth-child(2)":"Integração da plataforma comercial Vespera com o CRM Multidados.",
+      "#projects .role:nth-of-type(2) li:nth-child(3)":"Mapeamento de requisitos e estruturação da integração de dados entre vendas, finanças e operações.",
+      "#projects .role:nth-of-type(2) li:nth-child(4)":"Racionalização de ferramentas e fluxos sobrepostos para reduzir licenças evitáveis, esforço de suporte e atritos na implantação.",
+      "#projects .role:nth-of-type(2) > p:last-child":"<strong>Impacto no negócio:</strong> redução de trabalho manual e sobreposição de ferramentas, adoção mais rápida, governança fortalecida e suporte entre departamentos simplificado.",
+      "#projects .role:nth-of-type(3) h3":"Arquitetura híbrida e recuperação de desastres",
+      "#projects .role:nth-of-type(3) > p.muted":"Função: Arquiteto de infraestrutura",
+      "#projects .role:nth-of-type(3) .project-facts span:nth-child(1)":"2 hosts em cluster", "#projects .role:nth-of-type(3) .project-facts span:nth-child(2)":"Aproximadamente 20 VMs", "#projects .role:nth-of-type(3) .project-facts span:nth-child(3)":"Veeam + recuperação no Azure",
+      "#projects .role:nth-of-type(3) li:nth-child(1)":"Projeto de arquitetura com dois hosts físicos e replicação Veeam.",
+      "#projects .role:nth-of-type(3) li:nth-child(2)":"Implementação de virtualização Hyper-V para ambientes ERP e bancos de dados.",
+      "#projects .role:nth-of-type(3) li:nth-child(3)":"Construção de uma estratégia estruturada de backup com replicação externa no Azure.",
+      "#projects .role:nth-of-type(3) li:nth-child(4)":"Recuperação dos serviços críticos em menos de 24 horas após um incidente de ransomware.",
+      "#projects .role:nth-of-type(3) > p:last-child":"<strong>Impacto no negócio:</strong> estrutura de continuidade estabelecida, menor risco de indisponibilidade e maior confiabilidade da infraestrutura.",
+      "#projects .role:nth-of-type(4) h3":"Separação de bancos Oracle e integração multi-ERP",
+      "#projects .role:nth-of-type(4) > p.muted":"Função: Especialista em ERP e sistemas de gestão | Gerente de projetos de TI",
+      "#projects .role:nth-of-type(4) li:nth-child(1)":"Liderança da separação de bancos Oracle compartilhados para melhorar escalabilidade e governança.",
+      "#projects .role:nth-of-type(4) li:nth-child(2)":"Implementação do Mega ERP e RM Totvs para recursos humanos.",
+      "#projects .role:nth-of-type(4) li:nth-child(3)":"Gestão da equipe multidisciplinar de TI, fornecedores, requisitos, riscos e governança do rollout durante a transformação.",
+      "#projects .role:nth-of-type(4) li:nth-child(4)":"Padronização das práticas de integração e responsabilidade para reduzir trabalho duplicado e custos de suporte de longo prazo.",
+      "#projects .role:nth-of-type(4) > p:last-child":"<strong>Impacto no negócio:</strong> maior governança de dados, melhor integração comercial e escalabilidade dos sistemas corporativos.",
+      "#skills h2":"Principais competências", "#skills h3:nth-of-type(1)":"Sistemas e identidade", "#skills h3:nth-of-type(2)":"Nuvem e colaboração",
+      "#skills h3:nth-of-type(3)":"Virtualização, redes e resiliência", "#skills h3:nth-of-type(4)":"ERP, CRM e integração", "#skills h3:nth-of-type(5)":"Governança e entregas",
+      "#certs h2":"Formação e certificações", "#contact h2":"Contato",
+      "#certs li:nth-child(1) strong":"Bacharelado em Ciência da Computação", "#certs li:nth-child(3) span":"Treinamento especializado",
+      "#certs li:nth-child(5) strong":"Em andamento:", "#certs li:nth-child(5) span":"Administrador híbrido do Windows Server (AZ-800 / AZ-801), administração Azure, Intune e VMware",
+      "#contact > p":"Aberto a oportunidades em administração de sistemas, análise de infraestrutura, Microsoft 365, nuvem híbrida, sistemas de gestão e entrega de serviços de TI em Calgary e em todo o Canadá.",
+      "#contact .cta a":"Enviar e-mail"
+    };
+
+    const originals = new Map();
+    Object.keys(translations).forEach(selector => {
+      const element = document.querySelector(selector);
+      if (element) originals.set(selector, element.innerHTML);
+    });
+
+    function setLanguage(language) {
+      Object.keys(translations).forEach(selector => {
+        const element = document.querySelector(selector);
+        if (element) element.innerHTML = language === "pt" ? translations[selector] : originals.get(selector);
+      });
+      document.documentElement.lang = language === "pt" ? "pt-BR" : "en";
+      document.title = language === "pt"
+        ? "Dulcionor Willian de Oliveira | Infraestrutura Microsoft, ERP e Governança de TI"
+        : "Dulcionor Willian de Oliveira | Microsoft Infrastructure & Systems Administrator";
+      document.querySelectorAll("[data-lang]").forEach(button => {
+        const active = button.dataset.lang === language;
+        button.classList.toggle("active", active);
+        button.setAttribute("aria-pressed", String(active));
+      });
+      localStorage.setItem("portfolio-language", language);
+    }
+
+    document.querySelectorAll("[data-lang]").forEach(button => button.addEventListener("click", () => setLanguage(button.dataset.lang)));
+    setLanguage(localStorage.getItem("portfolio-language") === "pt" ? "pt" : "en");
   </script>
 </body>
 </html>
